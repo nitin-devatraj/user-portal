@@ -1,0 +1,752 @@
+@import "./variables.scss";
+
+//font family
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// typography variables
+$fontFamily: "Roboto", sans-serif;
+$fontStyle: normal;
+$color: $neutral20;
+$margin: 0;
+
+$h1FontSize: 4.5rem;
+$h2FontSize: 3.75rem;
+$h3FontSize: 3rem;
+$h4FontSize: 2.25rem;
+$h5FontSize: 1.875rem;
+$h6FontSize: 1.5rem;
+
+$h1LineHeight: 5.625rem;
+$h2LineHeight: 4.5rem;
+$h3LineHeight: 3.75rem;
+$h4LineHeight: 2.75rem;
+$h5LineHeight: 2.375rem;
+$h6LineHeight: 2rem;
+
+$t1FontSize: 1.25rem;
+$t2FontSize: 1.125rem;
+$t3FontSize: 1rem;
+$t4FontSize: 0.875rem;
+$t5FontSize: 0.75rem;
+
+$t1LineHeight: 1.875rem;
+$t2LineHeight: 1.75rem;
+$t3LineHeight: 1.5rem;
+$t4LineHeight: 1.25rem;
+$t5LineHeight: 1.125rem;
+
+$fontWeightLite: 300;
+$fontWeightReg: 400;
+$fontWeightMed: 500;
+$fontWeightSemi: 600;
+$fontWeightBold: 700;
+
+// typography
+// heading classes
+@mixin headings(
+  $fontFamily,
+  $fontSize,
+  $fontStyle,
+  $fontWeight,
+  $lineHeight,
+  $color,
+  $margin
+) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $color;
+  margin: $margin;
+}
+
+// h1 - group
+.h1Lite {
+  @include headings(
+    $fontFamily,
+    $h1FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $h1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h1Reg {
+  @include headings(
+    $fontFamily,
+    $h1FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $h1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h1Med {
+  @include headings(
+    $fontFamily,
+    $h1FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $h1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h1Semi {
+  @include headings(
+    $fontFamily,
+    $h1FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $h1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h1Bold {
+  @include headings(
+    $fontFamily,
+    $h1FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $h1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// h2 - group
+.h2Lite {
+  @include headings(
+    $fontFamily,
+    $h2FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $h2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h2Reg {
+  @include headings(
+    $fontFamily,
+    $h2FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $h2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h2Med {
+  @include headings(
+    $fontFamily,
+    $h2FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $h2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h2Semi {
+  @include headings(
+    $fontFamily,
+    $h2FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $h2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h2Bold {
+  @include headings(
+    $fontFamily,
+    $h2FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $h2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// h3 - group
+.h3Lite {
+  @include headings(
+    $fontFamily,
+    $h3FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $h3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h3Reg {
+  @include headings(
+    $fontFamily,
+    $h3FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $h3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h3Med {
+  @include headings(
+    $fontFamily,
+    $h3FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $h3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h3Semi {
+  @include headings(
+    $fontFamily,
+    $h3FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $h3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h3Bold {
+  @include headings(
+    $fontFamily,
+    $h3FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $h3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// h4 - group
+.h4Lite {
+  @include headings(
+    $fontFamily,
+    $h4FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $h4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h4Reg {
+  @include headings(
+    $fontFamily,
+    $h4FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $h4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h4Med {
+  @include headings(
+    $fontFamily,
+    $h4FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $h4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h4Semi {
+  @include headings(
+    $fontFamily,
+    $h4FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $h4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h4Bold {
+  @include headings(
+    $fontFamily,
+    $h4FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $h4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// h5 - group
+.h5Lite {
+  @include headings(
+    $fontFamily,
+    $h5FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $h5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h5Reg {
+  @include headings(
+    $fontFamily,
+    $h5FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $h5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h5Med {
+  @include headings(
+    $fontFamily,
+    $h5FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $h5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h5Semi {
+  @include headings(
+    $fontFamily,
+    $h5FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $h5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h5Bold {
+  @include headings(
+    $fontFamily,
+    $h5FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $h5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// h6 - group
+.h6Lite {
+  @include headings(
+    $fontFamily,
+    $h6FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $h6LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h6Reg {
+  @include headings(
+    $fontFamily,
+    $h6FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $h6LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h6Med {
+  @include headings(
+    $fontFamily,
+    $h6FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $h6LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h6Semi {
+  @include headings(
+    $fontFamily,
+    $h6FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $h6LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.h6Bold {
+  @include headings(
+    $fontFamily,
+    $h6FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $h6LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// text classes
+@mixin text(
+  $fontFamily,
+  $fontSize,
+  $fontStyle,
+  $fontWeight,
+  $lineHeight,
+  $color,
+  $margin
+) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-style: $fontStyle;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $color;
+  margin: $margin;
+}
+
+// t1 - group
+.t1Lite {
+  @include text(
+    $fontFamily,
+    $t1FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $t1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t1Reg {
+  @include text(
+    $fontFamily,
+    $t1FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $t1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t1Med {
+  @include text(
+    $fontFamily,
+    $t1FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $t1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t1Semi {
+  @include text(
+    $fontFamily,
+    $t1FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $t1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t1Bold {
+  @include text(
+    $fontFamily,
+    $t1FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $t1LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// t2 - group
+.t2Lite {
+  @include text(
+    $fontFamily,
+    $t2FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $t2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t2Reg {
+  @include text(
+    $fontFamily,
+    $t2FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $t2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t2Med {
+  @include text(
+    $fontFamily,
+    $t2FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $t2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t2Semi {
+  @include text(
+    $fontFamily,
+    $t2FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $t2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t2Bold {
+  @include text(
+    $fontFamily,
+    $t2FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $t2LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// t3 - group
+.t3Lite {
+  @include text(
+    $fontFamily,
+    $t3FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $t3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t3Reg {
+  @include text(
+    $fontFamily,
+    $t3FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $t3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t3Med {
+  @include text(
+    $fontFamily,
+    $t3FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $t3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t3Semi {
+  @include text(
+    $fontFamily,
+    $t3FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $t3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t3Bold {
+  @include text(
+    $fontFamily,
+    $t3FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $t3LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// t4 - group
+.t4Lite {
+  @include text(
+    $fontFamily,
+    $t4FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $t4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t4Reg {
+  @include text(
+    $fontFamily,
+    $t4FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $t4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t4Med {
+  @include text(
+    $fontFamily,
+    $t4FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $t4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t4Semi {
+  @include text(
+    $fontFamily,
+    $t4FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $t4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t4Bold {
+  @include text(
+    $fontFamily,
+    $t4FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $t4LineHeight,
+    $color,
+    $margin
+  );
+}
+
+// t5 - group
+.t5Lite {
+  @include text(
+    $fontFamily,
+    $t5FontSize,
+    $fontStyle,
+    $fontWeightLite,
+    $t5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t5Reg {
+  @include text(
+    $fontFamily,
+    $t5FontSize,
+    $fontStyle,
+    $fontWeightReg,
+    $t5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t5Med {
+  @include text(
+    $fontFamily,
+    $t5FontSize,
+    $fontStyle,
+    $fontWeightMed,
+    $t5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t5Semi {
+  @include text(
+    $fontFamily,
+    $t5FontSize,
+    $fontStyle,
+    $fontWeightSemi,
+    $t5LineHeight,
+    $color,
+    $margin
+  );
+}
+
+.t5Bold {
+  @include text(
+    $fontFamily,
+    $t5FontSize,
+    $fontStyle,
+    $fontWeightBold,
+    $t5LineHeight,
+    $color,
+    $margin
+  );
+}

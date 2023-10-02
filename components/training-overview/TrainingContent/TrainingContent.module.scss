@@ -1,0 +1,29 @@
+@import "../../../styles/global-styles.module.scss";
+
+.trainingContentContainer {
+  display: flex;
+  flex-direction: column;
+  height: 38dvh;
+  margin: 1rem 0;
+  // height: 30dvh;
+
+  .trainingAboutSectionLightTheme {
+    @extend .t3Reg;
+    @extend .lightThemeLow;
+    height: 100%;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    overflow: hidden;
+  }
+
+  .trainingAboutSectionDarkTheme {
+    color: $neutral95;
+    @extend .darkThemeHigh;
+  }
+
+  .lessonsAccordianContainer {
+    height: 100%;
+    border-radius: 0.25rem;
+    overflow-y: auto;
+  }
+}

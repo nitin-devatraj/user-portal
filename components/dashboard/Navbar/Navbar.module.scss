@@ -1,0 +1,51 @@
+@import "../../../styles/global-styles.module.scss";
+
+.navBarContainerLightTheme {
+  @extend .lightThemeLowest;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.0625rem solid $neutral90;
+  // background-color: $neutral99;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+
+  .navItemLightTheme {
+    @extend .t4Reg;
+    color: $neutral60;
+    background: inherit;
+    text-align: center;
+    display: flex;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+
+  .selectedLightTheme {
+    @extend .t4Med;
+    color: $primary40;
+  }
+}
+
+.navBarContainerDarkTheme {
+  @extend .darkThemeHigh;
+  border-top: 0.0625rem solid $neutral50;
+
+  .navItemDarkTheme {
+    color: $neutral80;
+  }
+
+  .selectedDarkTheme {
+    color: $primary70;
+  }
+}

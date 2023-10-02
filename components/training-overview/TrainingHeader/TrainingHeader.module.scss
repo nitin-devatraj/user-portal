@@ -1,0 +1,31 @@
+@import "../../../styles/global-styles.module.scss";
+
+.trainingHeaderContainerLightTheme {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 -1rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 0.0625rem solid $neutral90;
+
+  .trainingHeaderTextLightTheme {
+    @extend .t1Reg;
+  }
+
+  .backButton {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.trainingHeaderContainerDarkTheme {
+  @extend .darkThemeLowest;
+  border-bottom: 0.0625rem solid $neutral50;
+
+  .trainingHeaderTextDarkTheme {
+    color: $neutral95;
+  }
+}

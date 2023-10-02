@@ -1,0 +1,54 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.radioBtnLightTheme {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.0625rem solid $neutral70;
+  background: $neutral100;
+
+  &:hover {
+    border: 0.0625rem solid $primary80;
+  }
+
+  &:active {
+    border: 0.0625rem solid $primary40;
+    box-shadow: 0 0 0 0.25rem $primary90;
+  }
+
+  .radioBtnClickedLightTheme {
+    border: 0.0625rem solid $primary40;
+  }
+
+  .radioBtnIcon {
+    width: 0.6875rem;
+    height: 0.6875rem;
+    border-radius: 50%;
+    background: $primary40;
+  }
+}
+
+// dark theme mode
+.radioBtnDarkTheme {
+  background: $neutral20;
+  border: 0.0625rem solid $neutral80;
+
+  &:hover {
+    border: 0.0625rem solid $primary60;
+  }
+
+  &:active {
+    border: 0.0625rem solid $primary60;
+  }
+
+  .radioBtnClickedDarkTheme {
+    border: 0.0625rem solid $primary60;
+  }
+
+  .radioBtnIcon {
+    background: $primary60;
+  }
+}

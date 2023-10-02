@@ -1,0 +1,73 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.modalActionBtnsLightTheme {
+  display: inline-flex;
+  width: auto;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  .secondaryBtnLightTheme {
+    @extend .t3Reg;
+    cursor: pointer;
+    display: flex;
+    padding: 0.75rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 0 0;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $neutral90;
+    background: $neutral100;
+  }
+
+  .primaryBtnLightTheme {
+    @extend .t3Bold;
+    cursor: pointer;
+    display: flex;
+    padding: 0.75rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 0 0;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $primary50;
+    background: $primary50;
+  }
+}
+
+.modalActionBtnsDarkTheme {
+  display: inline-flex;
+  width: auto;
+  align-items: flex-start;
+  gap: 0.75rem;
+
+  .secondaryBtnDarkTheme {
+    @extend .t3Reg;
+    cursor: pointer;
+    display: flex;
+    padding: 0.75rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 0 0;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $neutral99;
+    background: transparent;
+    color: $neutral99;
+  }
+
+  .primaryBtnDarkTheme {
+    @extend .t3Bold;
+    cursor: pointer;
+    display: flex;
+    padding: 0.75rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 0 0;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $primary50;
+    background: $primary50;
+    color: $neutral100;
+  }
+}

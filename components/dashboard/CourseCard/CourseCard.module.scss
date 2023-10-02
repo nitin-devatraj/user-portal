@@ -1,0 +1,62 @@
+@import "../../../styles/global-styles.module.scss";
+
+.courseCardContainer {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 2.452px;
+  width: 75%;
+  height: auto;
+  margin-right: 1rem;
+  padding-bottom: 1rem;
+
+  .courseImgContainer {
+    transition: all 0.1s linear;
+    background-color: transparent;
+    width: 100%;
+    height: 18vh;
+    border-radius: 0.1532rem 0.1532rem 0rem 0rem;
+    overflow: hidden;
+
+    .courseImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+  }
+
+  .courseDetails {
+    padding: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+
+    .courseHeadingLightTheme {
+      @extend .t4Reg;
+      color: $neutral30;
+      white-space: normal;
+    }
+
+    .courseHeadingDarkTheme {
+      color: $neutral95;
+    }
+
+    .courseInfo {
+      display: flex;
+      gap: 0.75rem;
+      margin-left: -0.0625rem;
+
+      .courseInfoTextLightTheme {
+        @extend .t4Reg;
+        display: flex;
+        align-items: center;
+        color: $neutral50;
+      }
+
+      .courseInfoTextDarkTheme {
+        color: $neutral80;
+      }
+    }
+  }
+}

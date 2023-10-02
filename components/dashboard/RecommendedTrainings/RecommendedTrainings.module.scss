@@ -1,0 +1,29 @@
+@import "../../../styles/global-styles.module.scss";
+
+.recommendedTrainingsContainerLightTheme {
+  @extend .lightThemeLowest;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1rem 4.625rem;
+  margin: 0 -1rem;
+
+  .recommendedTrainingHeadingLightTheme {
+    @extend .t2Med;
+    color: $neutral30;
+  }
+
+  .trainingsCarousel {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.recommendedTrainingsContainerDarkTheme {
+  @extend .darkThemeHigh;
+
+  .recommendedTrainingHeadingDarkTheme {
+    color: $neutral95;
+  }
+}

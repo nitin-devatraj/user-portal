@@ -1,0 +1,157 @@
+@import "../../../styles/global-styles.module.scss";
+
+.trainingSummaryContainerLightTheme {
+  @extend .lightThemeRegular;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: -1rem;
+  padding: 1rem;
+
+  .trainingSummaryLightTheme {
+    @extend .lightThemeLowest;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .trainingSummmaryTextLightTheme {
+      @extend .t2Reg;
+      color: $neutral30;
+    }
+
+    .summaryDataBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.25rem;
+
+      .notStartedBar {
+        height: 0.75rem;
+        border-radius: 0.25rem;
+        background: $alert60;
+      }
+
+      .inProgressBar {
+        height: 0.75rem;
+        border-radius: 0.25rem;
+        background: $warning70;
+      }
+
+      .completedBar {
+        height: 0.75rem;
+        border-radius: 0.25rem;
+        background: $success60;
+      }
+    }
+
+    .summaryDataContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .notStartedContainer {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        .notStartedNumber {
+          @extend .t3Med;
+          color: $neutral100;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+          height: 2.25rem;
+          background: $alert60;
+        }
+
+        .notStartedText {
+          @extend .t4Reg;
+          color: $alert30;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
+          background: $alert90;
+        }
+      }
+
+      .inProgressContainer {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        .inProgressNumber {
+          @extend .t3Med;
+          color: $neutral100;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+          height: 2.25rem;
+          background: $warning70;
+        }
+
+        .inProgressText {
+          @extend .t4Reg;
+          color: $warning30;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
+          background: $warning90;
+        }
+      }
+
+      .completedContainer {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+
+        .completedNumber {
+          @extend .t3Med;
+          color: $neutral100;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-top-left-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+          height: 2.25rem;
+          background: $success60;
+        }
+
+        .completedText {
+          @extend .t4Reg;
+          color: $success30;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
+          background: $success90;
+        }
+      }
+    }
+  }
+}
+
+.trainingSummaryContainerDarkTheme {
+  @extend .darkThemeLow;
+
+  .trainingSummaryDarkTheme {
+    @extend .darkThemeHighest;
+
+    .trainingSummmaryTextDarkTheme {
+      color: $neutral95;
+    }
+  }
+}

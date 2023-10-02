@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+// shadow - variants - light theme
+.shadowSmLightTheme {
+  box-shadow: 0px 1px 2px 0px rgba($neutral10, 0.06),
+    0px 1px 3px 0px rgba($neutral10, 0.1);
+}
+
+.shadowMdLightTheme {
+  box-shadow: 0rem 0.125rem 0.25rem -0.125rem rgba($neutral10, 0.06),
+    0rem 0.25rem 0.5rem -0.125rem rgba($neutral10, 0.1);
+}
+
+.shadowLgLightTheme {
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba($neutral0, 0.25);
+}
+
+// shadow - variants - dark theme
+.shadowSmDarkTheme {
+  box-shadow: 0rem 0.0625rem 0.1875rem 0rem rgba($neutral100, 0.25);
+}
+
+.shadowMdDarkTheme {
+  box-shadow: 0rem 0.0625rem 0.125rem 0rem rgba($neutral100, 0.4),
+    0rem 0.0625rem 0.1875rem 0rem rgba($neutral100, 0.4);
+}
+
+.shadowLgDarkTheme {
+  box-shadow: 0rem 0.0625rem 0.125rem -0.125rem rgba($neutral100, 0.5),
+    0rem 0.1875rem 0.375rem 0rem rgba($neutral100, 0.4);
+}

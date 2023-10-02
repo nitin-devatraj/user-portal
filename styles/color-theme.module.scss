@@ -1,0 +1,54 @@
+@import "./variables.scss";
+
+@mixin lightTheme($textColor, $bgColor1, $bgColor1Percent, $bgColor2) {
+  color: $textColor;
+  background-color: mix($bgColor1, $bgColor2, $bgColor1Percent);
+}
+
+@mixin darkTheme($textColor, $bgColor1, $bgColor1Percent, $bgColor2) {
+  color: $textColor;
+  background-color: mix($bgColor1, $bgColor2, $bgColor1Percent);
+}
+
+.lightThemeLowest {
+  color: $neutral10;
+  background: $neutral99;
+}
+
+.lightThemeLow {
+  @include lightTheme($neutral0, $neutral99, 95%, $primary50);
+}
+
+.lightThemeRegular {
+  @include lightTheme($neutral0, $neutral99, 92%, $primary50);
+}
+
+.lightThemeHigh {
+  @include lightTheme($neutral0, $neutral99, 89%, $primary50);
+}
+
+.lightThemeHighest {
+  @include lightTheme($neutral0, $neutral99, 86%, $primary50);
+}
+
+// dark color theme
+.darkThemeLowest {
+  color: $neutral100;
+  background: $neutral10;
+}
+
+.darkThemeLow {
+  @include darkTheme($neutral100, $neutral10, 95%, $primary50);
+}
+
+.darkThemeRegular {
+  @include darkTheme($neutral100, $neutral10, 92%, $primary50);
+}
+
+.darkThemeHigh {
+  @include darkTheme($neutral100, $neutral10, 89%, $primary50);
+}
+
+.darkThemeHighest {
+  @include darkTheme($neutral100, $neutral10, 86%, $primary50);
+}

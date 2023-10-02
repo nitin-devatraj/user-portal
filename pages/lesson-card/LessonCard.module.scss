@@ -1,0 +1,28 @@
+@import "../../styles/global-styles.module.scss";
+
+.lessonCardContainerLightTheme {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.125rem;
+  height: 100dvh;
+
+  .lessonCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 2.125rem;
+    justify-content: space-between;
+    flex: 1;
+
+    .lesson {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: 85%;
+    }
+  }
+}
+
+.lessonCardContainerDarkTheme {
+  @extend .darkThemeLowest;
+}

@@ -1,0 +1,54 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.secondaryBtnLightTheme {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 0.0625rem solid $neutral80;
+  cursor: pointer;
+  @extend .t3Med;
+
+  &:not(:disabled):hover {
+    border: 0.0625rem solid $primary40;
+  }
+
+  &:not(:disabled):active {
+    box-shadow: 0 0 0 0.25rem $primary90;
+  }
+
+  &:disabled {
+    color: $neutral70;
+    background: $neutral90;
+    border: 0.0625rem solid $neutral90;
+    cursor: not-allowed;
+  }
+}
+
+.secondaryBtnDarkTheme {
+  border: 0.0625rem solid $primary80;
+  color: $primary80;
+
+  &:not(:disabled):hover {
+    border: 0.0625rem solid $primary60;
+    color: $primary60;
+  }
+
+  &:not(:disabled):active {
+    color: $neutral20;
+    box-shadow: initial;
+    background: $primary70;
+    border: 0.0625rem solid $primary70;
+  }
+
+  &:disabled {
+    color: $neutral60;
+    background: $neutral30;
+    border: 0.0625rem solid $neutral80;
+    cursor: not-allowed;
+  }
+}

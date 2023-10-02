@@ -1,0 +1,53 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.notificationItem {
+  display: flex;
+  padding: 0.625rem 1.125rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-radius: 0.25rem;
+
+  .notificationHeader {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .notificationTitle {
+      @extend .t1Semi;
+      flex: 1;
+    }
+
+    .cancelIconContainer {
+      cursor: pointer;
+    }
+  }
+
+  .notificationContent {
+    @extend .t3Reg;
+    padding: 0rem 2.5rem;
+    align-self: stretch;
+  }
+}
+
+.alert {
+  border: 0.0625rem solid $alert50;
+  background: $alert80;
+}
+
+.success {
+  border: 0.0625rem solid $success50;
+  background: $success90;
+}
+
+.warning {
+  border: 0.0625rem solid $warning50;
+  background: $warning90;
+}
+
+.info {
+  border: 0.0625rem solid $primary50;
+  background: $primary90;
+}

@@ -1,0 +1,43 @@
+@import "../../../styles/global-styles.module.scss";
+
+.tabContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  .tabLightTheme {
+    @extend .t3Reg;
+    color: $neutral40;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    background: $neutral90;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: stretch;
+    cursor: pointer;
+  }
+
+  .tabDarkTheme {
+    color: $neutral90;
+    background: $neutral30;
+  }
+
+  .tabContentLightTheme {
+    @extend .t3Reg;
+    color: $neutral50;
+    padding: 0.75rem 1.5rem;
+    background: $neutral95;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+
+  .tabContentDarkTheme {
+    color: $neutral80;
+    background: $neutral20;
+  }
+}

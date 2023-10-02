@@ -1,0 +1,96 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.selectInputContainer {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+    align-self: stretch;
+
+    .labelLightTheme {
+      @extend .t3Med;
+      color: $neutral30;
+    }
+
+    .labelDarkTheme {
+      color: $neutral95;
+    }
+
+    .inputLightTheme {
+      @extend .t3Reg;
+      display: flex;
+      align-self: stretch;
+      padding: 0.75rem 1rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      border-radius: 0.25rem;
+      border: 0.0625rem solid $neutral70;
+      background: $neutral100;
+      cursor: pointer;
+    }
+
+    .inputClickedLightTheme {
+      border: 0.0625rem solid $neutral20;
+    }
+
+    .inputDarkTheme {
+      border: 0.0625rem solid $neutral60;
+      background-color: $neutral20;
+      color: $neutral95;
+    }
+
+    .inputClickedDarkTheme {
+      border: 0.0625rem solid $neutral95;
+    }
+  }
+
+  .dropdownContainerLightTheme {
+    background: $neutral95;
+    position: absolute;
+    top: 5.5rem;
+    z-index: 1;
+    width: 100%;
+    max-height: 13.75rem;
+    border-radius: 0.25rem;
+    padding: 0.25rem -0.25rem;
+    display: inline-flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .dropdownItemLightTheme {
+      @extend .t3Lite;
+      display: flex;
+      padding: 0.75rem 1rem;
+      border-radius: 0.125rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      background: $neutral95;
+      cursor: pointer;
+
+      &:hover {
+        background: $neutral80;
+      }
+    }
+  }
+
+  .dropdownContainerDarkTheme {
+    background-color: $neutral20;
+
+    .dropdownItemDarkTheme {
+      background-color: $neutral20;
+      color: $neutral80;
+
+      &:hover {
+        background: $neutral40;
+      }
+    }
+  }
+}

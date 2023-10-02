@@ -1,0 +1,31 @@
+@import "../../../../styles/global-styles.module.scss";
+
+.quizHeaderLightTheme {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin: -1rem;
+  border-bottom: 0.0625rem solid $neutral90;
+
+  .backButton {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quizHeaderTextLightTheme {
+    @extend .t1Reg;
+  }
+}
+
+.quizHeaderDarkTheme {
+  @extend .darkThemeLowest;
+  border-bottom: 0.0625rem solid $neutral50;
+
+  .quizHeaderTextDarkTheme {
+    color: $neutral95;
+  }
+}

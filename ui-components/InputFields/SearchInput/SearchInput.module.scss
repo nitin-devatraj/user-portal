@@ -1,0 +1,38 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.searchInputContainerLightTheme {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  border: 0.0625rem solid $neutral70;
+  background: $neutral100;
+  gap: 0.5rem;
+
+  .input {
+    @extend .t3Reg;
+    color: $neutral50;
+    background: inherit;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      @extend .t3Reg;
+      color: $neutral70;
+    }
+  }
+}
+
+.searchInputContainerDarkTheme {
+  border: 0.0625rem solid $neutral30;
+  background: $neutral30;
+
+  .input {
+    color: $neutral95;
+    background: inherit;
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.tableRowHeaderLightTheme {
+  border-bottom: 0.0625rem solid $neutral80;
+  background: $neutral95;
+
+  .nameColumnHeaderLightTheme,
+  .statusColumnHeaderLightTheme,
+  .roleColumnHeaderLightTheme,
+  .emailColumnHeaderLightTheme,
+  .teamsColumnHeaderLightTheme,
+  .deleteColumnHeaderLightTheme,
+  .editColumnHeaderLightTheme {
+    @extend .t4Med;
+    color: $neutral30;
+    height: 48px;
+    padding: 12px 24px;
+    background-color: inherit;
+  }
+
+  .nameColumnHeaderDarkTheme,
+  .statusColumnHeaderDarkTheme,
+  .roleColumnHeaderDarkTheme,
+  .emailColumnHeaderDarkTheme,
+  .teamsColumnHeaderDarkTheme,
+  .deleteColumnHeaderDarkTheme,
+  .editColumnHeaderDarkTheme {
+    color: $neutral90;
+  }
+
+  .nameColumnHeaderLightTheme {
+    width: 25%;
+  }
+
+  .statusColumnHeaderLightTheme {
+    width: 8%;
+  }
+
+  .roleColumnHeaderLightTheme {
+    width: 17%;
+  }
+
+  .emailColumnHeaderLightTheme {
+    width: 20%;
+  }
+
+  .teamsColumnHeaderLightTheme {
+    width: 26.5%;
+  }
+
+  .deleteColumnHeaderLightTheme {
+    padding: 1rem 0.625rem;
+  }
+
+  .editColumnHeaderLightTheme {
+    padding: 1rem 0.875rem;
+  }
+}
+
+.tableRowHeaderDarkTheme {
+  border-bottom: 0.0625rem solid $neutral40;
+  background: $neutral20;
+}

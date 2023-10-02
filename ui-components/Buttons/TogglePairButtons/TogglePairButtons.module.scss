@@ -1,0 +1,55 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.togglePairButtonsContainer {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 20rem;
+  height: 4.3125rem;
+  flex-shrink: 0;
+
+  .labelLightTheme {
+    @extend .t4Lite;
+    color: $neutral50;
+  }
+
+  .labelDarkTheme {
+    @extend .t4Lite;
+    color: $neutral95;
+  }
+
+  .buttonGroup {
+    display: inline-flex;
+    align-items: flex-start;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $neutral90;
+
+    .selectedBtn {
+      @extend .t3Bold;
+      display: flex;
+      width: 10rem;
+      padding: 0.75rem 1rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      border-right: 0.0625rem solid $neutral95;
+      background: $neutral95;
+      cursor: pointer;
+    }
+
+    .btn {
+      @extend .t3Reg;
+      display: flex;
+      width: 10rem;
+      padding: 0.75rem 1rem;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+      border-right: 0.0625rem solid $neutral95;
+      background: $neutral100;
+      cursor: pointer;
+    }
+  }
+}

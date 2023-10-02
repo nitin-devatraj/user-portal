@@ -1,0 +1,28 @@
+@import "../../styles/global-styles.module.scss";
+
+.trainingOverviewContainerLightTheme {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 1rem;
+  padding-bottom: 2.125rem;
+  height: 100dvh;
+  justify-content: space-between;
+
+  .trainingOverview {
+    padding-top: 2.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .trainingBanner {
+    width: 100%;
+    height: 25dvh;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+}
+
+.trainingOverviewContainerDarkTheme {
+  @extend .darkThemeLowest;
+}

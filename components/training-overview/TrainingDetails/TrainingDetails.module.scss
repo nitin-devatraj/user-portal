@@ -1,0 +1,45 @@
+@import "../../../styles/global-styles.module.scss";
+
+.trainingDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  .trainingBanner {
+    width: 100%;
+    height: 25dvh;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+
+  .trainingDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .trainingNameLightTheme {
+      @extend .t3Reg;
+      color: $neutral30;
+    }
+
+    .trainingNameDarkTheme {
+      color: $neutral95;
+    }
+
+    .trainingDetailsInfoContainer {
+      display: flex;
+      gap: 0.75rem;
+
+      .trainingInfoLightTheme {
+        @extend .t4Reg;
+        display: flex;
+        align-items: center;
+        color: $neutral50;
+      }
+
+      .trainingInfoDarkTheme {
+        color: $neutral95;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/global-styles.module.scss";
+
+.progressBarContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .progressBarLightTheme {
+    @extend .lightThemeRegular;
+    flex: 1;
+    height: 0.75rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+
+  .progressBarDarkTheme {
+    background-color: $neutral40;
+  }
+
+  .progressCountLightTheme {
+    @extend .t5Semi;
+    color: $primary40;
+  }
+
+  .progressCountDarkTheme {
+    color: $primary70;
+  }
+}

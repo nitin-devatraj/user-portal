@@ -1,0 +1,50 @@
+@import "../../styles/global-styles.module.scss";
+
+.tabGroupContainer {
+  display: inline-flex;
+  width: 100%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  overflow: hidden;
+
+  .tabLightTheme {
+    @extend .t3Reg;
+    color: $neutral60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: none;
+    @extend .lightThemeLowest;
+    padding: 0.875rem 1rem;
+    border-bottom: 0.125rem solid transparent;
+    cursor: pointer;
+
+    // &:hover {
+    //   background-color: $neutral90;
+    // }
+  }
+
+  .selectedTabLightTheme {
+    color: $neutral20;
+    @extend .lightThemeLow;
+    border-bottom: 0.125rem solid $primary40;
+  }
+
+  .tabDarkTheme {
+    color: $neutral80;
+    @extend .darkThemeLow;
+    border-bottom: 2px solid transparent;
+
+    // &:hover {
+    //   background-color: $neutral20;
+    //   border-bottom: 2px solid $neutral20;
+    // }
+  }
+
+  .selectedTabDarkTheme {
+    color: $neutral95;
+    @extend .darkThemeHigh;
+    border-bottom: 2px solid $primary70;
+  }
+}

@@ -1,0 +1,66 @@
+@import "../../../../styles/global-styles.module.scss";
+
+.individualQuizContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .quizQuestionLightTheme {
+    @extend .t3Med;
+    color: $neutral30;
+    padding: 1rem 0.5rem;
+    border-radius: 0.375rem;
+    @extend .lightThemeLow;
+  }
+
+  .quizQuestionDarkTheme {
+    color: $neutral95;
+    @extend .darkThemeHigh;
+  }
+
+  .quizOptionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    .selectedOptionLightTheme {
+      border: 0.125rem solid $primary40;
+    }
+
+    .selectedOptionDarkTheme {
+      border: 0.125rem solid $primary70;
+    }
+
+    .quizOptionBtnLightTheme {
+      @extend .lightThemeLow;
+      @extend .t3Reg;
+      color: $neutral30;
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 0.375rem;
+      border: 0.125rem solid transparent;
+    }
+
+    .quizOptionBtnDarkTheme {
+      @extend .darkThemeHighest;
+      color: $neutral95;
+    }
+  }
+
+  // .quizOptionBtnLightTheme:hover,
+  // .quizOptionBtnLightTheme:active {
+  //   border: 0.125rem solid $primary40;
+  // }
+
+  .validOption {
+    border: 0.1563rem solid $success50;
+    background-color: red;
+  }
+
+  .invalidOption {
+    border: 0.1563rem solid $alert50;
+    background-color: blue;
+  }
+}

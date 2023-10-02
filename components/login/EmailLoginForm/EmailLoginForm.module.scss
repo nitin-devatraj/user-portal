@@ -1,0 +1,58 @@
+@import "../../../styles/global-styles.module.scss";
+
+.emailLoginFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  .form {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .formHeadingLightTheme {
+      @extend .h6Med;
+    }
+
+    .formHeadingDarkTheme {
+      color: $neutral95;
+    }
+
+    .formInputContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .forgotPasswordLightTheme {
+        @extend .t3Reg;
+        display: inline-block;
+        color: $primary50;
+        margin: 0.625rem 0;
+      }
+
+      .forgotPasswordDarkTheme {
+        color: $primary70;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .attributionContentLightTheme {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      @extend .t5Reg;
+    }
+
+    .attributionContentDarkTheme {
+      color: $neutral80;
+    }
+  }
+}

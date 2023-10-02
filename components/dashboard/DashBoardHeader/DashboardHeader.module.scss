@@ -1,0 +1,41 @@
+@import "../../../styles/global-styles.module.scss";
+
+.dashboardHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .headerNav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .logo {
+      width: 7.5rem;
+      // height: auto;
+      height: 2.5rem;
+      object-fit: cover;
+    }
+  }
+
+  .headerTitleLightTheme {
+    @extend .h6Reg;
+    color: $neutral30;
+  }
+
+  .headerTitleDarkTheme {
+    color: $neutral95;
+  }
+
+  .headerSubTitleLightTheme {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @extend .t4Reg;
+    color: $neutral50;
+  }
+
+  .headerSubTitleDarkTheme {
+    color: $neutral95;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../../global-styles/global-styles.module.scss";
+
+.btnGroupLightTheme {
+  display: inline-flex;
+  align-items: flex-start;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid $neutral90;
+
+  .btnLightTheme {
+    @extend .t3Reg;
+    display: flex;
+    padding: 0.9rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.0625rem solid $neutral90;
+    border-right: 0.0625rem solid $neutral90;
+    background: $neutral100;
+    cursor: pointer;
+  }
+
+  .selectedBtnLightTheme {
+    @extend .t3Bold;
+    background: $neutral95;
+  }
+}
+
+.btnGroupDarkTheme {
+  border: 0.0625rem solid $neutral100;
+
+  .btnDarkTheme {
+    border: 0.0625rem solid $neutral99;
+    border-right: 0.0625rem solid $neutral99;
+  }
+
+  .selectedBtnDarkTheme {
+    border: 0.0625rem solid $neutral99;
+    border-right: 0.0625rem solid $neutral99;
+  }
+}

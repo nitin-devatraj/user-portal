@@ -1,0 +1,149 @@
+@import "../../../global-styles/global-styles.scss";
+
+.tableRowLightTheme {
+  border-bottom: 0.0625rem solid $neutral90;
+  background-color: $neutral100;
+
+  .badge {
+    @extend .t5Med;
+    padding: 0.125rem 0.5rem;
+    gap: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+  }
+
+  .draftBadge {
+    color: $warning50;
+    background: $warning90;
+  }
+
+  .activeBadge {
+    color: $success50;
+    background: $success90;
+  }
+
+  .inactiveBadge {
+    color: $alert50;
+    background: $alert90;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .nameColumnLightTheme,
+  .statusColumnLightTheme,
+  .roleColumnLightTheme,
+  .emailColumnLightTheme,
+  .teamsColumnLightTheme,
+  .deleteColumnLightTheme,
+  .editColumnLightTheme {
+    @extend .t3Reg;
+    color: $neutral40;
+    height: 4rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .nameColumnDarkTheme,
+  .statusColumnDarkTheme,
+  .roleColumnDarkTheme,
+  .emailColumnDarkTheme,
+  .teamsColumnDarkTheme,
+  .deleteColumnDarkTheme,
+  .editColumnDarkTheme {
+    color: $neutral95;
+  }
+
+  .nameColumnLightTheme {
+    width: 24%;
+
+    .nameColumnContainer {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+
+      .name {
+        .input {
+          @extend .t3Reg;
+          color: $neutral40;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        .requiredMessage {
+          @extend .t5Lite;
+          color: $alert50;
+        }
+      }
+    }
+  }
+
+  .statusColumnLightTheme {
+    width: 8%;
+  }
+
+  .roleColumnLightTheme {
+    width: 17%;
+  }
+
+  .emailColumnLightTheme {
+    width: 20%;
+  }
+
+  .teamsColumnLightTheme {
+    width: 26.5%;
+
+    .badges {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.125rem 0.5rem;
+      @extend .t5Reg;
+      border-radius: 0.625rem;
+
+      .badgeGroup1 {
+        color: $badgeColorMain1;
+        background: $badgeColorBack1;
+      }
+
+      .badgeGroup2 {
+        color: $badgeColorMain2;
+        background: $badgeColorBack2;
+      }
+
+      .badgeGroup5 {
+        color: $badgeColorMain5;
+        background: $badgeColorBack5;
+      }
+
+      .remainingCount {
+        @extend .t5Reg;
+        color: $neutral30;
+        text-align: center;
+      }
+    }
+  }
+
+  .deleteColumnLightTheme {
+    padding: 1rem 0.625rem;
+  }
+
+  .editColumnLightTheme {
+    padding: 1rem 0.875rem;
+  }
+}
+
+.tableRowDarkTheme {
+  border-bottom: 0.0625rem solid $neutral50;
+  background: $neutral20;
+}

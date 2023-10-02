@@ -1,0 +1,108 @@
+@import "../../../styles/global-styles.module.scss";
+
+.lessonHeaderContainerLightTheme {
+  @extend .lightThemeLow;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 0.375rem;
+  padding: 1rem 0.5rem 0.5rem 0.5rem;
+
+  .lessonHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .lessonNameLightTheme {
+      @extend .t3Med;
+      color: $neutral30;
+    }
+
+    .lessonIcon {
+      @extend .t5Med;
+      height: 3rem;
+      width: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.25rem;
+    }
+
+    .videoIcon {
+      color: $badgeColorMain1;
+      background: $badgeColorBack1;
+    }
+
+    .audioIcon {
+      color: $badgeColorMain3;
+      background-color: $badgeColorBack3;
+    }
+
+    .documentIcon {
+      color: $badgeColorMain5;
+      background-color: $badgeColorBack5;
+    }
+
+    .quizIcon {
+      color: $badgeColorMain8;
+      background-color: $badgeColorBack8;
+    }
+
+    .assessmentIcon {
+      color: $badgeColorMain9;
+      background-color: $badgeColorBack9;
+    }
+  }
+
+  .navButtonContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .nextNavButtonLightTheme {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 0.25rem;
+      @extend .t3Reg;
+      color: $success50;
+    }
+
+    .prevNavButtonLightTheme {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 0.25rem;
+      @extend .t3Reg;
+      color: $neutral40;
+    }
+
+    .navButtonDisabledLightTheme {
+      color: $neutral70;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.lessonHeaderContainerDarkTheme {
+  @extend .darkThemeRegular;
+
+  .lessonHeader {
+    .lessonNameDarkTheme {
+      color: $neutral95;
+    }
+  }
+
+  .navButtonContainer {
+    .nextNavButtonDarkTheme {
+      color: $success70;
+    }
+
+    .prevNavButtonDarkTheme {
+      color: $neutral90;
+    }
+
+    .navButtonDisabledDarkTheme {
+      color: $neutral60;
+    }
+  }
+}
