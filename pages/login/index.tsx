@@ -6,17 +6,22 @@ import EmailLoginForm from "../../components/login/EmailLoginForm/EmailLoginForm
 import ResetPasswordForm from "../../components/login/ResetPasswordForm/ResetPasswordForm";
 import MailVerification from "../../components/login/MailVerification/MailVerification";
 import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 import Image from "next/image";
 
-function Login() {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
+const Login = (): React.JSX.Element => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
   // eslint-disable-next-line
-  const [defaultLoginMethod, setDefaultLoginMethod] = useState("email");
-  const [isLoginBtnClicked, setIsLoginBtnClicked] = useState(false);
-  const [showMailVerification, setShowMailVerification] = useState(false);
-  const [showResetPasswordForm, setShowResetPasswordForm] = useState(false);
-  const [showFirstEmailForm, setShowFirstEmailForm] = useState(true);
-  const [showSecondEmailForm, setShowSecondEmailForm] = useState(false);
+  const [defaultLoginMethod, setDefaultLoginMethod] =
+    useState<string>("mobile");
+  const [isLoginBtnClicked, setIsLoginBtnClicked] = useState<boolean>(false);
+  const [showMailVerification, setShowMailVerification] =
+    useState<boolean>(false);
+  const [showResetPasswordForm, setShowResetPasswordForm] =
+    useState<boolean>(false);
+  const [showFirstEmailForm, setShowFirstEmailForm] = useState<boolean>(true);
+  const [showSecondEmailForm, setShowSecondEmailForm] =
+    useState<boolean>(false);
 
   const emailLoginFormHandler = () => {
     setShowFirstEmailForm(false);
@@ -87,6 +92,6 @@ function Login() {
         )}
     </div>
   );
-}
+};
 
 export default Login;

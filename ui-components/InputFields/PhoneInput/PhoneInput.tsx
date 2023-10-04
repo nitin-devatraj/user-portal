@@ -1,10 +1,25 @@
 import React, { useRef, useState } from "react";
 import styles from "./PhoneInput.module.scss";
 import ArrowIcon from "./ArrowIcon/ArrowIcon";
+import { RootState } from "../../../store/store";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 
-function PhoneInput({
+interface PhoneInputProps {
+  label: string;
+  helperText: string;
+  disabled: boolean;
+  required: boolean;
+  type: string;
+  placeholder: string;
+  showHelperText: boolean;
+  onChange: (value: string) => void;
+  value: string;
+  invalid: boolean;
+  countryCodesList: string[];
+}
+
+const PhoneInput = ({
   label,
   helperText,
   disabled,
@@ -16,11 +31,11 @@ function PhoneInput({
   value,
   invalid,
   countryCodesList,
-}) {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
+}: PhoneInputProps): React.JSX.Element => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(countryCodesList[0]);
-  const dropDownRef = useRef();
+  const dropDownRef = useRef<HTMLDivElement>(null);
 
   const inputClickHandler = () => {
     if (!disabled) {
@@ -28,12 +43,14 @@ function PhoneInput({
     }
   };
 
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     setIsDropDownOpen(false);
   };
 
-  const phoneInputChangeHandler = (event) => {
+  const phoneInputChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     onChange(event.target.value);
   };
 
@@ -67,7 +84,7 @@ function PhoneInput({
     isDarkMode && styles.dropdownItemDarkTheme
   }`;
 
-  const randomId = Math.random();
+  const randomId: string = Math.random().toString();
 
   return (
     <div className={styles.phoneInputContainer}>
@@ -130,6 +147,6 @@ function PhoneInput({
       </div>
     </div>
   );
-}
+};
 
 export default PhoneInput;

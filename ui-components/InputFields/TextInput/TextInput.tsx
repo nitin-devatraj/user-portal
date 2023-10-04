@@ -1,9 +1,23 @@
 import React from "react";
 import styles from "./TextInput.module.scss";
+import { RootState } from "../../../store/store";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 
-function TextInput({
+interface TextInputProps {
+  label: string;
+  helperText: string;
+  disabled: boolean;
+  required: boolean;
+  type: string;
+  placeholder: string;
+  showHelperText: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+  invalid: boolean;
+}
+
+const TextInput = ({
   label,
   helperText,
   disabled,
@@ -14,9 +28,8 @@ function TextInput({
   onChange,
   value,
   invalid,
-}) {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
-
+}: TextInputProps) => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
   const labelStyles = `${styles.labelLightTheme} ${
     isDarkMode && styles.labelDarkTheme
   } ${disabled && styles.disabledLabel}`;
@@ -64,6 +77,6 @@ function TextInput({
       </div>
     </div>
   );
-}
+};
 
 export default TextInput;

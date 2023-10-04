@@ -1,10 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+export interface ThemeState {
+  darkMode: boolean;
+}
+
+const initialState: ThemeState = {
+  darkMode: false,
+};
+
 const themeSlice = createSlice({
   name: "theme",
-  initialState: {
-    darkMode: false,
-  },
+  initialState,
   reducers: {
     toggleDarkMode: (state) => {
       state.darkMode = !state.darkMode;

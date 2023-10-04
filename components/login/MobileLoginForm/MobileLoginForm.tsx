@@ -4,21 +4,28 @@ import PhoneInput from "../../../ui-components/InputFields/PhoneInput/PhoneInput
 import FourDigitInput from "../FourDigitInput/FourDigitInput";
 import PrimaryButton from "../../../ui-components/Buttons/PrimaryButton/PrimaryButton";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-function MobileLoginForm() {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [isMobileNumberValid, setIsMobileNumberValid] = useState(true);
-  const [showHelperText, setShowHelperText] = useState(false);
-  const [isGenerateOtpBtnClicked, setIsGenerateOtpBtnClicked] = useState(false);
-  const [showRequiredText, setShowRequiredText] = useState(false);
-  const [digits, setDigits] = useState(["", "", "", ""]);
-  const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+const MobileLoginForm = (): React.JSX.Element => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
+  const [mobileNumber, setMobileNumber] = useState<string>("");
+  const [isMobileNumberValid, setIsMobileNumberValid] = useState<boolean>(true);
+  const [showHelperText, setShowHelperText] = useState<boolean>(false);
+  const [isGenerateOtpBtnClicked, setIsGenerateOtpBtnClicked] =
+    useState<boolean>(false);
+  const [showRequiredText, setShowRequiredText] = useState<boolean>(false);
+  const [digits, setDigits] = useState<string[]>(["", "", "", ""]);
+  const inputRefs: React.MutableRefObject<null | HTMLInputElement>[] = [
+    useRef(null),
+    useRef(null),
+    useRef(null),
+    useRef(null),
+  ];
   const router = useRouter();
 
-  const countryCodes = [
+  const countryCodes: string[] = [
     "IN",
     "US",
     "CA",
@@ -32,10 +39,13 @@ function MobileLoginForm() {
     "IN",
   ];
 
-  const isGenerateOtpBtnDisabled = mobileNumber.length < 1;
-  const areAnyDigitsOmitted = digits.some((digit) => digit === "");
+  const isGenerateOtpBtnDisabled: boolean = mobileNumber.length < 1;
+  const areAnyDigitsOmitted: boolean = digits.some((digit) => digit === "");
 
-  const handleChange = (index, event) => {
+  const handleChange = (
+    index: number,
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setShowRequiredText(false);
 
     const newDigits = [...digits];
@@ -43,23 +53,26 @@ function MobileLoginForm() {
     setDigits(newDigits);
 
     if (index < inputRefs.length - 1 && event.target.value !== "") {
-      inputRefs[index + 1].current.focus();
+      inputRefs[index + 1].current?.focus();
     }
   };
 
-  const handleBackspace = (index, event) => {
+  const handleBackspace = (
+    index: number,
+    event: React.KeyboardEvent<HTMLInputElement>
+  ) => {
     if (event.key === "Backspace" && index >= 1 && !event.currentTarget.value) {
       inputRefs[index - 1].current?.focus();
     }
   };
 
-  const mobileNumberChangeHandler = (value) => {
+  const mobileNumberChangeHandler = (value: string) => {
     setShowHelperText(false);
     setIsMobileNumberValid(true);
     setMobileNumber(value);
   };
 
-  const isEnteredMobileNumberValid = (mobileNumber) => {
+  const isEnteredMobileNumberValid = (mobileNumber: string) => {
     return mobileNumber.trim() !== "" && mobileNumber.length >= 10;
   };
 
@@ -81,7 +94,7 @@ function MobileLoginForm() {
     }
   };
 
-  const formSubmitHandler = (event) => {
+  const formSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
   };
 
@@ -111,6 +124,10 @@ function MobileLoginForm() {
             invalid={!isMobileNumberValid}
             countryCodesList={countryCodes}
             type="tel"
+            label=""
+            disabled={false}
+            required={false}
+            placeholder=""
           />
         ) : (
           <FourDigitInput
@@ -162,6 +179,6 @@ function MobileLoginForm() {
       </div>
     </form>
   );
-}
+};
 
 export default MobileLoginForm;

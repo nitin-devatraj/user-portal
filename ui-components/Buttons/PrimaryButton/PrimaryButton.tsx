@@ -1,13 +1,26 @@
 import React from "react";
 import styles from "./PrimaryButton.module.scss";
+import { RootState } from "../../../store/store";
 import { useSelector } from "react-redux";
 
-function PrimaryButton({ disabled, onClick, className, children, type }) {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
+interface PrimaryButtonProps {
+  disabled: boolean;
+  type: "button" | "submit" | "reset";
+  onClick: () => void;
+  children: React.ReactNode;
+}
+
+const PrimaryButton = ({
+  disabled,
+  onClick,
+  children,
+  type,
+}: PrimaryButtonProps): React.JSX.Element => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
 
   const primaryBtnStyles = `${styles.primaryBtnLightTheme} ${
     isDarkMode && styles.primaryBtnDarkTheme
-  } ${className}`;
+  }`;
 
   return (
     <button
@@ -19,6 +32,6 @@ function PrimaryButton({ disabled, onClick, className, children, type }) {
       {children}
     </button>
   );
-}
+};
 
 export default PrimaryButton;

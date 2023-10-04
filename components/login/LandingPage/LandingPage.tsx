@@ -5,10 +5,19 @@ import bannerAnimationLightTheme from "../../../public/bannerAnimation.json";
 import bannerAnimationDarkTheme from "../../../public/bannerAnimationDarkTheme.json";
 import Lottie from "lottie-react";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
 import Image from "next/image";
 
-function LandingPage({ loginMethod, onLoginBtnClick }) {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
+interface LandingPageProps {
+  loginMethod: string;
+  onLoginBtnClick: (arg: boolean) => void;
+}
+
+const LandingPage = ({
+  loginMethod,
+  onLoginBtnClick,
+}: LandingPageProps): React.JSX.Element => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
 
   const loginBtnHandler = () => {
     onLoginBtnClick(true);
@@ -47,6 +56,7 @@ function LandingPage({ loginMethod, onLoginBtnClick }) {
           onClick={loginBtnHandler}
           className={styles.loginBtn}
           type="submit"
+          disabled={false}
         >
           {loginMethod === "mobile"
             ? "Login with Mobile Number"
@@ -74,6 +84,6 @@ function LandingPage({ loginMethod, onLoginBtnClick }) {
       </div>
     </div>
   );
-}
+};
 
 export default LandingPage;

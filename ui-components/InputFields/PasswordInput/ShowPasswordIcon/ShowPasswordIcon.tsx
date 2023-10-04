@@ -1,5 +1,7 @@
 import React from "react";
 
+interface ShowPasswordIconProps {}
+
 function ShowPasswordIcon({ invalid, isDarkMode, className, onClick }) {
   const fillColor = !invalid ? "#AAACAF" : !isDarkMode ? "#d92d20" : "#f97066";
 

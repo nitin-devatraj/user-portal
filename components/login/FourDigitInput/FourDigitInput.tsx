@@ -1,17 +1,32 @@
 import React, { useEffect, useState } from "react";
 import styles from "./FourDigitInput.module.scss";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
 
-function FourDigitInput({
+interface FourDigitInputProps {
+  digits: string[];
+  handleChange: (
+    index: number,
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => void;
+  inputRefs: React.MutableRefObject<null | HTMLInputElement>[];
+  showRequiredText: boolean;
+  handleBackspace: (
+    index: number,
+    event: React.KeyboardEvent<HTMLInputElement>
+  ) => void;
+}
+
+const FourDigitInput = ({
   digits,
   handleChange,
   inputRefs,
   showRequiredText,
   handleBackspace,
-}) {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
-  const [countdown, setCountdown] = useState(60);
-  const [isResendOtpClicked, setIsResendOtpClicked] = useState(false);
+}: FourDigitInputProps): React.JSX.Element => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
+  const [countdown, setCountdown] = useState<number>(60);
+  const [isResendOtpClicked, setIsResendOtpClicked] = useState<boolean>(false);
 
   const timerStyles = `${styles.timerTextLightTheme}  ${
     countdown <= 0 && !isResendOtpClicked && styles.timerExpiredText
@@ -34,7 +49,7 @@ function FourDigitInput({
   }, [countdown]);
 
   useEffect(() => {
-    inputRefs[0].current.focus();
+    inputRefs[0].current?.focus();
     // eslint-disable-next-line
   }, []);
 
@@ -59,7 +74,7 @@ function FourDigitInput({
               type="text"
               pattern="\d*"
               inputMode="numeric"
-              maxLength="1"
+              maxLength={1}
               value={digit}
               onChange={(event) => handleChange(index, event)}
               ref={inputRefs[index]}
@@ -68,7 +83,7 @@ function FourDigitInput({
           );
         })}
       </div>
-      {showRequiredText === true && (
+      {showRequiredText && (
         <p className={requiredTextStyles}>You have entered the wrong OTP</p>
       )}
 
@@ -78,6 +93,6 @@ function FourDigitInput({
       </span>
     </div>
   );
-}
+};
 
 export default FourDigitInput;

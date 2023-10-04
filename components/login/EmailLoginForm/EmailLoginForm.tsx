@@ -4,36 +4,50 @@ import TextInput from "../../../ui-components/InputFields/TextInput/TextInput";
 import PasswordInput from "../../../ui-components/InputFields/PasswordInput/PasswordInput";
 import PrimaryButton from "../../../ui-components/Buttons/PrimaryButton/PrimaryButton";
 import { useSelector } from "react-redux";
+import { RootState } from "../../../store/store";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
-function EmailLoginForm({ onSubmit, isSecondEmailForm }) {
+interface EmailLoginFormProps {
+  onSubmit: () => void;
+  isSecondEmailForm: boolean;
+}
+
+const EmailLoginForm = ({
+  onSubmit,
+  isSecondEmailForm,
+}: EmailLoginFormProps): React.JSX.Element => {
   const router = useRouter();
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
-  const [email, setEmail] = useState("");
-  const [isEmailValid, setIsEmailValid] = useState(true);
-  const [showEmailHelperText, setShowEmailHelperText] = useState(false);
-  const [password, setPassword] = useState("");
-  const [isPasswordValid, setIsPasswordValid] = useState(true);
-  const [showPasswordHelperText, setShowPasswordHelperText] = useState(false);
-  const [isForgotPasswordClicked, setisForgotPasswordClicked] = useState(false);
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
+  const [email, setEmail] = useState<string>("");
+  const [isEmailValid, setIsEmailValid] = useState<boolean>(true);
+  const [showEmailHelperText, setShowEmailHelperText] =
+    useState<boolean>(false);
+  const [password, setPassword] = useState<string>("");
+  const [isPasswordValid, setIsPasswordValid] = useState<boolean>(true);
+  const [showPasswordHelperText, setShowPasswordHelperText] =
+    useState<boolean>(false);
+  const [isForgotPasswordClicked, setisForgotPasswordClicked] =
+    useState<boolean>(false);
 
-  const isLoginBtnDisabled = email.length < 1 || password.length < 1;
-  const isContinueBtnDisabled = email.length < 1;
+  const isLoginBtnDisabled: boolean = email.length < 1 || password.length < 1;
+  const isContinueBtnDisabled: boolean = email.length < 1;
 
-  const emailChangeHandler = (event) => {
+  const emailChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsEmailValid(true);
     setShowEmailHelperText(false);
     setEmail(event.target.value);
   };
 
-  const passwordChangeHandler = (event) => {
+  const passwordChangeHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setIsPasswordValid(true);
     setShowPasswordHelperText(false);
     setPassword(event.target.value);
   };
 
-  const isEnteredEmailValid = (email) => {
+  const isEnteredEmailValid = (email: string) => {
     return (
       email.trim() !== "" &&
       email.indexOf("@") !== -1 &&
@@ -41,7 +55,7 @@ function EmailLoginForm({ onSubmit, isSecondEmailForm }) {
     );
   };
 
-  const isEnteredPasswordValid = (password) => {
+  const isEnteredPasswordValid = (password: string) => {
     return password.trim() !== "" && password.length >= 8;
   };
 
@@ -72,7 +86,7 @@ function EmailLoginForm({ onSubmit, isSecondEmailForm }) {
     }
   };
 
-  const formSubmitHandler = (event) => {
+  const formSubmitHandler = (event: React.FormEvent) => {
     event.preventDefault();
   };
 
@@ -107,18 +121,23 @@ function EmailLoginForm({ onSubmit, isSecondEmailForm }) {
             helperText="enter a valid email address"
             showHelperText={showEmailHelperText}
             invalid={!isEmailValid}
+            disabled={false}
+            required={false}
+            placeholder=""
           />
 
           {!isForgotPasswordClicked && (
             <div>
               <PasswordInput
-                type="password"
                 label="Password"
                 onChange={passwordChangeHandler}
                 value={password}
                 helperText="minimum 8 digits required"
                 showHelperText={showPasswordHelperText}
                 invalid={!isPasswordValid}
+                disabled={false}
+                required={false}
+                placeholder=""
               />
               {!isSecondEmailForm && (
                 <span
@@ -173,6 +192,6 @@ function EmailLoginForm({ onSubmit, isSecondEmailForm }) {
       </div>
     </form>
   );
-}
+};
 
 export default EmailLoginForm;

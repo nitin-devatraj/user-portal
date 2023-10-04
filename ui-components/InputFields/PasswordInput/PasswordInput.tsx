@@ -2,21 +2,34 @@ import React, { useState } from "react";
 import styles from "./PasswordInput.module.scss";
 import ShowPasswordIcon from "./ShowPasswordIcon/ShowPasswordIcon";
 import HidePasswordIcon from "./HidePasswordIcon/HidePasswordIcon";
+import { RootState } from "../../../store/store";
 import { useSelector } from "react-redux";
 
-function PasswordInput({
+interface PasswordInputProps {
+  label: string;
+  helperText: string;
+  showHelperText: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
+  invalid: boolean;
+  disabled: boolean;
+  required: boolean;
+  placeholder: string;
+}
+
+const PasswordInput = ({
   label,
   helperText,
-  disabled,
-  required,
-  placeholder,
   showHelperText,
   onChange,
   value,
   invalid,
-}) {
-  const isDarkMode = useSelector((state) => state.theme.darkMode);
-  const [showPassword, setShowPassword] = useState(false);
+  disabled,
+  required,
+  placeholder,
+}: PasswordInputProps): React.JSX.Element => {
+  const isDarkMode = useSelector((state: RootState) => state.theme.darkMode);
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -38,7 +51,7 @@ function PasswordInput({
     invalid && isDarkMode && styles.helperTextInvalidDarkTheme
   }`;
 
-  const randomId = Math.random().toFixed(3);
+  const randomId: string = Math.random().toFixed(3);
 
   return (
     <div className={styles.passwordInputContainer}>
@@ -76,6 +89,6 @@ function PasswordInput({
       </div>
     </div>
   );
-}
+};
 
 export default PasswordInput;
